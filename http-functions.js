@@ -2,7 +2,7 @@ var https = require('https');
 var log = console.log;
 
 
-function getHTML (options, callback) {
+module.exports = function getHTML (options, callback) {
 
   /* Add your code here */
   var output = "";
