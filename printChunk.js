@@ -1,6 +1,7 @@
 var https = require('https');
 
 function getAndPrintHTMLChunks () {
+  // var https = require('https');
 
   var requestOptions = {
     host: 'sytantris.github.io',
@@ -13,9 +14,9 @@ function getAndPrintHTMLChunks () {
 
     // the callback is invoked when a `data` chunk is received
     response.on('data', function (data) {
-    console.log('Chunk Received. Length:', data.length);
+    console.log('Chunk Received', data);
     });
   });
 }
-
+module.exports = getAndPrintHTMLChunks;
 getAndPrintHTMLChunks();
